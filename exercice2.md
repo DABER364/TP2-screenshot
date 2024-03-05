@@ -2,11 +2,11 @@
 
 ## Rétrospective sur le processus
 ### Combien de temps (moyenne, minimum, maximum ) votre équipe prenait-elle pour implémenter une issue?
-Moyenne : 2 heures
+Moyenne : 3 heures
 
 Minimum : 30 minutes
 
-Maximum : 4 heures
+Maximum : 6 heures
 
 ### Combien de temps (moyenne, minimum, maximum ) votre équipe prenait-elle pour intégrer une pull-request? (review + correctifs)
 Moyenne : 30 minutes
@@ -45,7 +45,7 @@ Maximum : 3 pull-requests
 
 #### Selon vous, est-ce que les issues/pull-requests prenaient trop de temps à être terminer? Ou pas assez? Quel serait le temps idéal (approximatif) pour chacun ?
 
-Non, les pull-request et les issues ne prenaient pas trop de temps à être implémentés. Le temps idéal pour les issues devrait être de 1 à 2 jours et de 1 jour pour les pull-requests.
+Non, les pull-request et les issues ne prenaient pas trop de temps à être implémentés. Le temps idéal pour les issues devrait être de 4 heures et de 2 heures pour les pull-requests. Les 2 heures pour les pulls-requests permettent à l’équipe de faire un bon code-review et de s’assurer que tout fonctionne.
 
 #### Quel est le lien entre la taille de ces issues/pull-requests et le temps que ça prenait à les terminer?
 
