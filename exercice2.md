@@ -1,4 +1,4 @@
-# Exercices - TP1
+# Exercices 2- TP2
 
 ## Rétrospective sur le processus
 ### Combien de temps (moyenne, minimum, maximum ) votre équipe prenait-elle pour implémenter une issue?
@@ -108,5 +108,7 @@ Pull request #42
 ![image](https://github.com/DABER364/TP2-screenshot/assets/119546325/820ff181-2d4a-4371-a0dc-d2d74340a232)
 
 ## Arbre de commits
-À faire
-![image](https://github.com/Meleksebri/images/assets/91430760/8c72f6fc-de5b-4c42-bc3c-667eb585634f)
+![image](https://github.com/DABER364/TP2-screenshot/assets/91430760/87220caf-bf65-45bf-8470-c632c4a67f1f)
+![image](https://github.com/DABER364/TP2-screenshot/assets/91430760/a8544f3f-797b-4765-9732-e604ade2fed0)
+
+
