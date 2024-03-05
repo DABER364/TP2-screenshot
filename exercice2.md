@@ -95,14 +95,14 @@ La création d'une réservation, la requête doit être dans restaurant, mais no
 
 
 ## Pull request
-Pull request #39
+
 ![image](https://github.com/DABER364/TP2-screenshot/assets/119546325/72586f69-1432-455d-9ecf-c5423f62742e)
 ![image](https://github.com/DABER364/TP2-screenshot/assets/119546325/f800eebf-60a4-4ab6-8c43-e2f52915c189)
-Pull request #40
+
 ![image](https://github.com/DABER364/TP2-screenshot/assets/119546325/e01ec3e8-9248-47b8-99c6-d1a40bbf91cb)
 ![image](https://github.com/DABER364/TP2-screenshot/assets/119546325/4a1cb473-80e4-450d-a6f5-6f91e1f44f2d)
 ![image](https://github.com/DABER364/TP2-screenshot/assets/119546325/e73b05b1-8578-4d10-97c6-0ed76408ea14)
-Pull request #42
+
 ![image](https://github.com/DABER364/TP2-screenshot/assets/119546325/820ff181-2d4a-4371-a0dc-d2d74340a232)
 
 ## Arbre de commits
