@@ -6,7 +6,7 @@ Moyenne : 2 heures
 
 Minimum : 30 minutes
 
-Maximum : 6 heures
+Maximum : 4 heures
 
 ### Combien de temps (moyenne, minimum, maximum ) votre équipe prenait-elle pour intégrer une pull-request? (review + correctifs)
 Moyenne : 30 minutes
@@ -30,11 +30,11 @@ Minimum : 1 personnes
 Maximum : 3 personnes
 
 ### Combien d’issue (moyenne, minimum, maximum ) étaient en cours d’implémentation en même temps?
-Moyenne : 3 issues
+Moyenne : 2 issues
 
-Minimum : 2 issues
+Minimum : 1 issues
 
-Maximum : 4 issues
+Maximum : 3 issues
 
 ### Combien de pull request (moyenne, minimum, maximum ) étaient en cours de review en même temps?
 Moyenne : 1 pull-requests
@@ -42,8 +42,6 @@ Moyenne : 1 pull-requests
 Minimum : 0 pull-requests
 
 Maximum : 3 pull-requests
-
-### Après avoir mesuré ces métriques, voici les réflexions que vous devez poser en équipe et répondre au document d’exercice : 
 
 #### Selon vous, est-ce que les issues/pull-requests prenaient trop de temps à être terminer? Ou pas assez? Quel serait le temps idéal (approximatif) pour chacun ?
 
@@ -54,11 +52,11 @@ Non, les pull-request et les issues ne prenaient pas trop de temps à être impl
 Il est évident qu'il existe une corrélation entre la taille des tâches et le temps nécessaire pour les terminer. Les tâches plus grandes demandent plus de temps pour être complétées, tandis que les tâches plus petites peuvent être achevées plus rapidement. Cependant, la fragmentation excessive des tâches peut également entraîner une perte de temps due à la gestion accrue des transitions entre les tâches.
 
 #### Donnez au moins 3 trucs pour améliorer votre processus (tailles des issues/pr, communication, code-reviews, uniformisation, etc)
-Code-reviews: On devrait faire plus de code-reviews, l’équipe utilise beaucoup Prettier pour avoir du bon code. Au moins un membre de l’équipe devrait s’assurer que quand quelqu’un push le code en entier, on vérifie chaque ligne pour faire du bon code.
+Code-reviews:  Il faut impliquer au moins trois personnes dans les revues de code pour permettre d'apporter différents points de vue et de détecter des erreurs ou des améliorations potentielles. Par exemple, si seulement une ou deux personnes examinent le code, il y a un risque que des erreurs ou des problèmes potentiels passent inaperçus. De même, si les revues de code ne sont pas effectuées régulièrement ou de manière cohérente, cela peut entraîner des retards dans la détection et la correction des problèmes, ce qui peut affecter la qualité globale du logiciel.
 
-Communication: Notre communication n'est pas totalement optimale, nous avons planifié d’avoir une rencontre hebdomadaire le vendredi à 15h, mais nous ne respectons pas totalement cette règle, on la déplace souvent et on planifie souvent une rencontre dernière minute pour la remise.
+Communication: Le problème de communication que nous rencontrons affecte notre capacité à rester organisés et à respecter nos engagements. Bien que nous ayons prévu des réunions hebdomadaires le vendredi à 15h pour discuter de nos progrès et de nos plans, nous avons du mal à respecter cette routine. Souvent, nous déplaçons ces réunions ou en planifions de nouvelles à la dernière minute pour discuter des tâches en cours ou des remises imminentes. Pour améliorer cette situation, nous devons nous engager à respecter nos réunions régulières, à communiquer de manière proactive sur notre progression et nos besoins, et à planifier nos activités de manière plus stratégique pour éviter les rushes de dernière minute.
 
-Tailles des issues: Les grosses issues comme les tests unitaires, peuvent être fragmentées en  tâches plus petites et gérables pourrait accélérer le processus. Il est important de trouver un équilibre entre la taille des tâches pour éviter à la fois la surcharge de gestion et la fragmentation excessive.
+Dépendances des issues et PR: Le problème avec les dépendances entre les issues et les pull requests, c'est qu'elles peuvent souvent entraîner des retards dans notre progression. Par exemple, lorsque quelqu'un veut commencer à travailler sur sa partie du projet, il se rends compte qu'il y a une tâche dont il a besoin qui est toujours en cours par un autre membre de l'équipe. Cela signifie qu'il doit attendre que cette tâche soit terminée avant de pouvoir commencer, ce qui peut ralentir le rythme de travail global. De plus, cela peut rendre difficile la planification des activités et des échéances, car nous dépendons souvent des autres pour achever leurs tâches avant de pouvoir avancer. .
 
 ## Architecture
 ### Diagramme
