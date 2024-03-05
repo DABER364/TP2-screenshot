@@ -61,6 +61,8 @@ Communication: Notre communication n'est pas totalement optimale, nous avons pla
 Tailles des issues: Les grosses issues comme les tests unitaires, peuvent être fragmentées en  tâches plus petites et gérables pourrait accélérer le processus. Il est important de trouver un équilibre entre la taille des tâches pour éviter à la fois la surcharge de gestion et la fragmentation excessive.
 
 ## Architecture
+### Diagramme
+![image](https://github.com/DABER364/TP2-screenshot/assets/91430760/e310b0f9-ca1a-408f-b648-71222f178d6d)
 ### Décrire les rôles de classes principales:
 #### RestaurantService :
 Rôle : La classe RestaurantService est responsable de gérer les opérations liées aux restaurants. RestaurantService est un contrôleur associé aux classes Restaurant qui sont liées à l’infrastructure, l’application et les entities.
