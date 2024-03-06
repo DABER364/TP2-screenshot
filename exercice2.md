@@ -63,20 +63,90 @@ Dépendances des issues et PR: Le problème avec les dépendances entre les issu
 ![image](https://github.com/DABER364/TP2-screenshot/assets/91430760/e310b0f9-ca1a-408f-b648-71222f178d6d)
 ### Décrire les rôles de classes principales:
 #### RestaurantService :
-Rôle : La classe RestaurantService est responsable de gérer les opérations liées aux restaurants. RestaurantService est un contrôleur associé aux classes Restaurant qui sont liées à l’infrastructure, l’application et les entities.
+Rôle : 
+Gère les opérations liées aux restaurants. Il sert de contrôleur associé aux classes liées à l'infrastructure, à l'application et aux entités.
+
+Responsabilités :
+- Implémenter la logique métier liée à la gestion des restaurants.
+- Se connecter à la couche d'infrastructure pour interagir avec les données liées aux restaurants.
+- Orchestrer le flux des opérations dans le domaine des restaurants.
 
 #### ReservationService :
-Rôle : La classe ReservationService est chargée de gérer les réservations de tables au sein du restaurant. ReservationService est un contrôleur associé aux classes Restaurant qui sont liées à l’infrastructure, l’application et les entities.
+Rôle : 
+Gère les opérations de réservation de tables au sein du restaurant.
+
+Responsabilités :
+- Implémenter la logique métier liée aux réservations de tables.
+- Interagir avec la couche d'infrastructure pour stocker et récupérer les données de réservation.
+- Coordonner les actions et événements liés aux réservations dans le système du restaurant.
 
 ### ReservationRessource:
-Rôle : ReservationRessource gère les requêtes entrantes des réservations et dirige le flux de contrôle vers les ressources appropriées comme la classe ReservationResponse.
+Rôle : 
+Gère les demandes de réservation entrantes et dirige le flux de contrôle vers les ressources appropriées, telles que la classe ReservationResponse.
+
+Responsabilités :
+- Recevoir et gérer les demandes de réservation entrantes des appels API.
+- Acheminer les demandes vers les services appropriés, tels que ReservationService, pour les traiter.
+- Convertir et formater les données liées aux réservations pour les réponses.
+
 #### RestaurantRessource
-Rôle :  Restaurant Ressources gère les requêtes entrantes des réservations et dirige le flux de contrôle vers les ressources appropriées comme les classes (RestaurantResponse et RestaurantResponseAssembler)
+Rôle : 
+Gère les demandes liées aux restaurants entrantes et dirige le flux de contrôle vers les ressources appropriées, telles que les classes RestaurantResponse et RestaurantResponseAssembler.
+
+Responsabilités :
+- Gérer les demandes entrantes liées aux restaurants des appels API.
+- Acheminer les demandes vers les services appropriés, tels que RestaurantService, pour les traiter.
+- Formater et assembler les données liées aux restaurants pour les réponses.
+- Gérer éventuellement des tâches telles que l'authentification, la validation et la gestion des erreurs liées aux demandes de restaurants.
+
+### RestaurantFactory:
+
+Rôle : 
+Responsable de créer des instances d'entités de restaurant à partir du service.
+
+Responsabilités :
+- Créer de nouvelles instances d'entités de restaurant en utilisant les données fournies par le service de restaurant.
+- Gérer la création et l'initialisation des objets d'entités de restaurant conformément aux spécifications définies.
+
+### ReservationFactory:
+
+Rôle : 
+Responsable de créer des instances d'entités de réservation à partir du service de réservation.
+
+Responsabilités :
+- Créer de nouvelles instances d'entités de réservation en utilisant les données fournies par le service de réservation.
+- Gérer la création et l'initialisation des objets d'entités de réservation conformément aux spécifications définies.
+- Peut implémenter des logiques spécifiques liées à la création de réservations, telles que la vérification des disponibilités, la validation des données, etc.
 
 ### Expliquer vos choix d’architecture:
-Nous avons choisi l’architecture Horizontale Slicing pour notre projet. Le but est que chaque couche de la fonction est ensuite développée indépendamment et le système est construit de bas en haut. Cette approche permet de créer des parties entièrement fonctionnelles et utilisables du système, même si l'ensemble du système n'est pas complet.
+Dans cette architecture, nous adoptons une approche de découpage horizontal où chaque couche (services, ressources, repositories) est structurée en fonctionnalités spécifiques. Par exemple, dans la couche de services, chaque service est dédié à une fonctionnalité du système, comme la gestion des restaurants ou des réservations. De même, dans la couche de ressources, chaque ressource gère les requêtes liées à une fonctionnalité particulière exposée par l'API.
+
+Dans le choix de cette architecture, plusieurs considérations ont été prises en compte pour garantir la robustesse et la maintenabilité du système. Tout d'abord, la séparation claire des responsabilités à travers les différentes couches (services, ressources, repositories) permet une meilleure organisation du code. Chaque couche est dédiée à des fonctionnalités spécifiques, comme la gestion des restaurants ou des réservations, ce qui rend le code plus lisible et plus compréhensible.
+
+En structurant l'architecture de cette manière, nous favorisons également la maintenabilité du système. Les modifications ou les ajouts de fonctionnalités peuvent être effectués de manière plus fluide, car chaque partie du système est isolée et peut être modifiée sans impacter les autres parties. De plus, cette modularité facilite également les tests unitaires et les tests d'intégration, ce qui contribue à la fiabilité du système.
+
 ### Notez les endroits ou les relations semblent suspectes et trouver des solutions potentielles
-La création d'une réservation, la requête doit être dans restaurant, mais nous l’avons mis dans réservation, ce qui est suspect, car cela implique que la responsabilité de gérer la création des réservations est attribuée à la classe qui représente les réservations elles-mêmes. Une solution potentielle serait de déplacer la logique de création de réservation vers la classe ReservationService. Cela permettrait de clarifier les responsabilités de chaque classe et de rendre le code plus modulaire et plus facile à comprendre. De plus, cela favoriserait la réutilisation du code, car la logique de création de réservation pourrait être partagée entre différentes parties du système qui ont besoin de créer des réservations.
+
+Dans l'architecture proposée, quelques problèmes potentiels peuvent être identifiés :
+
+Complexité accrue d'intégration :
+
+- Problème : Avec de nombreuses fonctionnalités distinctes, l'intégration du code peut devenir plus complexe et nécessiter une gestion plus minutieuse.
+- Solution potentielle : Utiliser des outils d'automatisation d'intégration et des pratiques de déploiement continu pour simplifier et accélérer le processus de déploiement.
+
+Difficultés de test :
+- Problème : 
+Tester chaque fonctionnalité individuellement peut être simple, mais tester les interactions entre les fonctionnalités peut devenir complexe.
+- Solution potentielle : 
+Mettre en place des tests d'intégration pour vérifier les interactions entre les fonctionnalités et utiliser des outils de test automatisés pour améliorer l'efficacité des tests.
+
+Surévaluation de la modularité :
+- Problème : Trop de découpage horizontal peut entraîner une sur-modularité, ce qui rend le système complexe et difficile à comprendre.
+- Solution potentielle : Évaluer régulièrement la pertinence de la modularisation et regrouper les fonctionnalités similaires lorsque cela est approprié pour simplifier le système.
+
+Difficulté à maintenir la cohérence globale :
+- Problème : Avec de nombreuses fonctionnalités autonomes, il peut être difficile de maintenir une cohérence globale dans le système.
+- Solution potentielle : Établir des normes et des conventions de codage claires, ainsi que des processus de revue de code pour garantir une cohérence dans l'ensemble du système.
 
 
 
